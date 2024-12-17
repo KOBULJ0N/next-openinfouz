@@ -40,8 +40,6 @@ The project follows a **feature-based architecture** for scalability and maintai
 
 ### **Folder Structure**
 
----
-
 src/
 │── assets/ # Static assets: images, fonts, icons
 │ ├── images/
@@ -146,13 +144,13 @@ src/
 2. **Configure i18n**
 
    ```ts
-   import { createI18n } from 'vue-i18n';
-   import en from './en.json';
-   import uz from './uz.json';
+   import { createI18n } from "vue-i18n";
+   import en from "./en.json";
+   import uz from "./uz.json";
 
    const i18n = createI18n({
-     locale: 'en',
-     fallbackLocale: 'en',
+     locale: "en",
+     fallbackLocale: "en",
      messages: { en, uz },
    });
 
@@ -162,7 +160,7 @@ src/
 3. **Use Translations**
    ```vue
    <template>
-     <h1>{{ $t('welcome') }}</h1>
+     <h1>{{ $t("welcome") }}</h1>
    </template>
    ```
 
@@ -181,12 +179,12 @@ src/
 
    ```js
    module.exports = {
-     darkMode: 'class',
+     darkMode: "class",
      theme: {
        extend: {
          colors: {
-           primary: '#1E3A8A',
-           secondary: '#9333EA',
+           primary: "#1E3A8A",
+           secondary: "#9333EA",
          },
        },
      },
@@ -202,7 +200,7 @@ src/
 
    <script setup>
    const toggleTheme = () => {
-     document.documentElement.classList.toggle('dark');
+     document.documentElement.classList.toggle("dark");
    };
    </script>
    ```
