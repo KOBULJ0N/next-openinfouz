@@ -1,9 +1,9 @@
 <script setup>
-import News from "@/components/Nodirabegim/News.vue";
+import NewsContainer from "@/components/Nodirabegim/NewsContainer.vue";
 </script>
 
 <template>
   <main>
-    <News></News>
+    <NewsContainer></NewsContainer>
   </main>
 </template>

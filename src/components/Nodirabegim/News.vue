@@ -1,5 +1,18 @@
 <template>
-  <el-card>CArd </el-card>
+  <el-card>
+    <div class="news-container">
+      <!-- News Icon Placeholder -->
+      <div class="news-icon">
+        <el-image :src="imageSrc" fit="cover" />
+      </div>
+
+      <!-- News Content -->
+      <div class="news-content">
+        <h3 class="news-title">{{ title }}</h3>
+        <p class="news-date">{{ date }}</p>
+      </div>
+    </div>
+  </el-card>
 </template>
 
 <script setup>
@@ -54,6 +67,7 @@ defineProps({
   justify-content: center;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
 }
 
 /* Content Styling */
