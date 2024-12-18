@@ -1,5 +1,5 @@
 <template>
-  <el-card class="news-card" shadow="hover"> </el-card>
+  <el-card>CArd </el-card>
 </template>
 
 <script setup>
