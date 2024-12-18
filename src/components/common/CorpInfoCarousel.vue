@@ -52,7 +52,7 @@ export default {
   background: url("@/assets/corp_info_header.png") no-repeat center center;
   background-size: cover;
   position: relative;
-  border-radius: 8px;
+
   color: white; /* White text */
   opacity: 0.5;
   padding: 1rem;
@@ -77,7 +77,7 @@ export default {
   background: url("@/assets/corp_info_header.png") no-repeat center center;
   background-size: cover;
   position: relative;
-  border-radius: 8px;
+
   padding: 1rem;
   color: white;
 }
