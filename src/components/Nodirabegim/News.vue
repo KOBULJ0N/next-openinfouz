@@ -1,15 +1,21 @@
 <template>
-  <el-card>
+  <el-card class="news-card">
     <div class="news-container">
-      <!-- News Icon Placeholder -->
       <div class="news-icon">
         <el-image :src="imageSrc" fit="cover" />
       </div>
-
-      <!-- News Content -->
       <div class="news-content">
-        <h3 class="news-title">{{ title }}</h3>
-        <p class="news-date">{{ date }}</p>
+        <h3 class="news-title">
+          <a :href="titleLink" target="_blank">{{ title }}</a>
+        </h3>
+        <p class="news-date">
+          <a :href="dateLink" target="_blank">{{ date }}</a>
+        </p>
+        <p class="news-section">
+          <a :href="sectionLink" target="_blank">{{ section.en }}</a> |
+          <a :href="sectionLink" target="_blank">{{ section.ru }}</a> |
+          <a :href="sectionLink" target="_blank">{{ section.fr }}</a>
+        </p>
       </div>
     </div>
   </el-card>
@@ -31,62 +37,112 @@ defineProps({
     type: String,
     default: "https://via.placeholder.com/80x80?text=NEWS",
   },
+  titleLink: {
+    type: String,
+    default: "#",
+  },
+  dateLink: {
+    type: String,
+    default: "#",
+  },
+  sectionLink: {
+    type: String,
+    default: "#",
+  },
+  section: {
+    type: Object,
+    default: () => ({
+      en: "News Section",
+      ru: "Раздел новостей",
+      fr: "Section des nouvelles",
+    }),
+  },
 });
 </script>
 
 <style scoped>
-/* Card styling with strong box shadow */
 .news-card {
-  height: 150px;
-  padding: 10px;
-  margin: 20px; /* Adds spacing around the card */
+  height: auto;
+  padding: 15px;
+  margin: 20px;
   border-radius: 8px;
-  border: 1px solid #7e8085; /* Subtle border for better visibility */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  border: 1px solid var(--card-border-color);
+  background-color: var(--card-bg-color);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* Hover effect for a dynamic feel */
 .news-card:hover {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
-  transform: translateY(-5px); /* Adds slight lift effect */
+  transform: translateY(-5px);
 }
 
-/* Container to align icon and content horizontally */
+:root {
+  --card-bg-color: #ffffff;
+  --card-border-color: #7e8085;
+}
+
+body.dark-mode :root {
+  --card-bg-color: #1f1f1f;
+  --card-border-color: #333333;
+}
+
 .news-container {
   display: flex;
+  align-items: center;
 }
 
-/* Icon styling */
 .news-icon {
   width: 80px;
   height: 80px;
-  background-color: #e0f2ff; /* Light blue background */
+  background-color: var(--icon-bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   margin-right: 15px;
 }
 
-/* Content Styling */
+.news-icon img {
+  border-radius: 8px;
+}
+
+:root {
+  --icon-bg-color: #e0f2ff;
+}
+
+body.dark-mode :root {
+  --icon-bg-color: #4a4a4a;
+}
+
 .news-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1;
 }
 
-.news-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  color: #303133;
+.news-title,
+.news-date,
+.news-section {
+  margin: 5px 0;
 }
 
-.news-date {
-  font-size: 14px;
-  color: #909399;
-  margin-top: 5px;
+.news-title a,
+.news-date a,
+.news-section a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.news-title a:hover,
+.news-date a:hover,
+.news-section a:hover {
+  text-decoration: underline;
+}
+
+:root {
+  --text-color: #303133;
+}
+
+body.dark-mode :root {
+  --text-color: #dcdcdc;
 }
 </style>
