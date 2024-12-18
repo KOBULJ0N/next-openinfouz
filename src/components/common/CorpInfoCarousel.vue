@@ -49,12 +49,13 @@ export default {
 .info-card {
   flex: 0 0 60%; /* Set width to 55% */
   height: 330px; /* Fixed height */
-  background: url("@/assets/corp_info_header.png") no-repeat center center;
+  background: url("@/assets/opacity_corp_info_header.png") no-repeat center
+    center;
   background-size: cover;
   position: relative;
 
   color: white; /* White text */
-  opacity: 0.5;
+
   padding: 1rem;
 }
 
