@@ -1,6 +1,5 @@
 <template>
   <div :class="['container', theme]">
-    <!-- Main Content with Background Image, Fixed Height, and Bottom-Left Text -->
     <div class="info-card">
       <a href="#" class="info-text">
         ЕДИНЫЙ ПОРТАЛ КОРПОРАТИВНОЙ ИНФОРМАЦИИ<br />
@@ -8,8 +7,6 @@
         ПРОЕКТОВ РЕСПУБЛИКИ УЗБЕКИСТАН
       </a>
     </div>
-
-    <!-- Sidebar with Background Image, Fixed Height, and Top-Left Text -->
     <div class="info-sidebar">
       <a href="#" class="info-text">
         Важность корпоративного управления в АО
@@ -23,7 +20,7 @@ export default {
   name: "CorporateInfo",
   data() {
     return {
-      theme: "light", // Default theme
+      theme: "light",
     };
   },
   methods: {
@@ -35,7 +32,6 @@ export default {
 </script>
 
 <style scoped>
-/* General Container */
 .container {
   display: flex;
   flex-direction: row;
@@ -45,24 +41,21 @@ export default {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Info Card with Fixed Height, Background, Opacity, and Bottom-Left Positioned Text */
 .info-card {
-  flex: 0 0 60%; /* Set width to 55% */
-  height: 330px; /* Fixed height */
+  flex: 0 0 60%;
+  height: 330px;
   background: url("@/assets/opacity_corp_info_header.png") no-repeat center
     center;
   background-size: cover;
   position: relative;
-
-  color: white; /* White text */
-
+  color: white;
   padding: 1rem;
 }
 
 .info-card .info-text {
   position: absolute;
-  bottom: 1rem; /* Align text to bottom */
-  left: 1rem; /* Align text to left */
+  bottom: 1rem;
+  left: 1rem;
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
@@ -71,37 +64,33 @@ export default {
   line-height: 1.4;
 }
 
-/* Info Sidebar with Fixed Height, Background, and Top-Left Positioned Text */
 .info-sidebar {
-  flex: 0 0 35%; /* Set width to 35% */
-  height: 330px; /* Fixed height */
+  flex: 0 0 35%;
+  height: 330px;
   background: url("@/assets/corp_info_header.png") no-repeat center center;
   background-size: cover;
   position: relative;
-
   padding: 1rem;
   color: white;
 }
 
 .info-sidebar .info-text {
   position: absolute;
-  top: 1rem; /* Align text to top */
-  left: 1rem; /* Align text to left */
+  top: 1rem;
+  left: 1rem;
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  color: inherit; /* Adjusts text color for theme */
+  color: inherit;
   line-height: 1.4;
 }
 
-/* Light Theme */
 .light {
   background-color: #f0f4f8;
   color: #333;
 }
 
-/* Dark Theme */
 .dark {
   background-color: #1e1e2f;
   color: #f0f0f0;
@@ -109,11 +98,10 @@ export default {
 
 .dark .info-card,
 .dark .info-sidebar {
-  color: white; /* Ensures white text in dark theme */
+  color: white;
   background-blend-mode: overlay;
 }
 
-/* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -124,12 +112,12 @@ export default {
   .info-sidebar {
     flex: 1;
     width: 100%;
-    height: 300px; /* Slightly smaller height for mobile */
+    height: 300px;
   }
 
   .info-card .info-text,
   .info-sidebar .info-text {
-    position: static; /* Remove absolute positioning for mobile */
+    position: static;
     margin-top: 0.5rem;
     text-align: left;
   }
