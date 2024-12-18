@@ -5,7 +5,7 @@ import NewsContainer from "@/components/news/NewsContainer.vue";
 
 <template>
   <main>
-    <NewsContainer></NewsContainer>
     <CorpInfoCarousel></CorpInfoCarousel>
+    <NewsContainer></NewsContainer>
   </main>
 </template>

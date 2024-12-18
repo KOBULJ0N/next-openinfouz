@@ -1,6 +1,6 @@
 <template>
   <div :class="['container', theme]">
-    <!-- Main Content -->
+    <!-- Main Content with Background Image and Opacity -->
     <div class="info-card">
       <a href="#" class="info-text">
         ЕДИНЫЙ ПОРТАЛ КОРПОРАТИВНОЙ ИНФОРМАЦИИ<br />
@@ -9,7 +9,7 @@
       </a>
     </div>
 
-    <!-- Sidebar -->
+    <!-- Sidebar with Background Image -->
     <div class="info-sidebar">
       <a href="#" class="info-text">
         Важность корпоративного управления в АО
@@ -44,17 +44,31 @@ export default {
   gap: 1rem;
   padding: 1rem;
   transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg-color);
 }
 
-/* Info Card and Sidebar */
-.info-card,
-.info-sidebar {
+/* Info Card with Background and Opacity */
+.info-card {
   flex: 1;
-  background: rgba(255, 255, 255, 0.8);
+  background: url("@/assets/corp_info_header.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: inherit;
+  position: relative;
+}
+
+.info-sidebar {
+  flex: 1;
+  background: url("@/assets/corp_info_header.png") no-repeat center center;
+  background-size: cover;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  color: inherit;
+  position: relative;
 }
 
 .info-text {
@@ -83,7 +97,10 @@ export default {
 
 .dark .info-card,
 .dark .info-sidebar {
-  background: rgba(0, 0, 0, 0.5);
+  background: url("@/assets/corp_info_header.png") no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #fff;
 }
 
 /* Responsive Design for Mobile */
