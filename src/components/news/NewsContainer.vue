@@ -1,14 +1,14 @@
 <template>
   <div class="news-grid">
-    <News />
-    <News />
-    <News />
-    <News />
+    <NewsCard />
+    <NewsCard />
+    <NewsCard />
+    <NewsCard />
   </div>
 </template>
 
 <script setup>
-import News from "./News.vue";
+import NewsCard from "./NewsCard.vue";
 </script>
 
 <style scoped>

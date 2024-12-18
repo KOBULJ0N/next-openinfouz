@@ -1,5 +1,5 @@
 <script setup>
-import NewsContainer from "@/components/Nodirabegim/NewsContainer.vue";
+import NewsContainer from "@/components/news/NewsContainer.vue";
 </script>
 
 <template>
