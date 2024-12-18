@@ -1,6 +1,6 @@
 <script setup>
-import CorpInfoCarousel from "@/components/Nodirabegim/CorpInfoCarousel.vue";
-import NewsContainer from "@/components/Nodirabegim/NewsContainer.vue";
+import CorpInfoCarousel from "@/components/common/CorpInfoCarousel.vue";
+import NewsContainer from "@/components/news/NewsContainer.vue";
 </script>
 
 <template>
