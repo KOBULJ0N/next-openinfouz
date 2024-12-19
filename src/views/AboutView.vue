@@ -1,7 +1,9 @@
+<script setup lang="ts">
+import DynamicPieChart from "@/components/statistics/DynamicPieChart.vue";
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <DynamicPieChart :percentage="73" :total="100" />
 </template>
 
 <style>
