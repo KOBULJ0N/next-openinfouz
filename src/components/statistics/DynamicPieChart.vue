@@ -60,7 +60,7 @@ export default {
               {
                 value: 100 - this.percentage,
                 name: "Remaining",
-                itemStyle: { color: "#e5e7eb" },
+                itemStyle: { color: "white" },
               },
             ],
           },
