@@ -1,7 +1,6 @@
 <template>
   <el-config-provider :size="size" :z-index="zIndex">
     <div :class="['app-wrapper', { dark: isDark }]">
-      <ThemeSwitcher v-model:isDark="isDark" />
       <router-view />
     </div>
   </el-config-provider>

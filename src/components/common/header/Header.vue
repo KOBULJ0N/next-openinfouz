@@ -6,7 +6,7 @@
       <SearchInput />
       <LanguageSelector @change-lang="changeLang" />
 
-      <!-- <ThemesSwitcher v-model:isDark="isDark" /> -->
+      <ThemeSwitcher v-model:isDark="isDark" />
     </div>
     <el-divider></el-divider>
     <!-- <NavigationComponent /> -->
