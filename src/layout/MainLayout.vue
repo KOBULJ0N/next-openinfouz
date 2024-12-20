@@ -18,8 +18,6 @@
 
 <script setup>
 import { RouterView } from "vue-router";
-import Footer from "@/components/common/Footer.vue";
-import Header from "@/components/common/header/Header.vue";
 </script>
 
 <style scoped></style>

@@ -1,7 +1,7 @@
 <template>
-  <el-config-provider :size="size" :z-index="zIndex" namespace="ep">
+  <el-config-provider :size="size" :z-index="zIndex">
     <div :class="['app-wrapper', { dark: isDark }]">
-      <theme-switch v-model:isDark="isDark" />
+      <ThemeSwitcher v-model:isDark="isDark" />
       <router-view />
     </div>
   </el-config-provider>
@@ -11,11 +11,7 @@
 import { ref, watch, onMounted } from "vue";
 import { useCssVar } from "@vueuse/core";
 import { ElConfigProvider } from "element-plus";
-import ThemeSwitch from "./components/ThemeSwitch.vue";
 
-// Basic configuration
-const size = ref("default");
-const zIndex = ref(2000);
 const isDark = ref(false);
 
 // Theme configuration
