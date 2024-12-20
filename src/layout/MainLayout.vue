@@ -19,9 +19,9 @@
 </template>
 
 <script setup>
+import Footer from "@/components/shared/Footer.vue";
+import Header from "@/components/shared/header/Header.vue";
 import { RouterView } from "vue-router";
-import Footer from "@/components/common/Footer.vue";
-import Header from "@/components/common/header/Header.vue";
 </script>
 
 <style scoped></style>
