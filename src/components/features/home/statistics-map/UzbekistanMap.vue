@@ -16,6 +16,30 @@
       viewBox="0 0 800 600"
       @mouseleave="hoveredRegion = ''"
     >
+      <defs>
+        <!-- Gradient for Selected Regions -->
+        <linearGradient
+          id="selectedGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" style="stop-color: #ff7f50; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #ff4500; stop-opacity: 1" />
+        </linearGradient>
+        <!-- Gradient for Hovered Regions -->
+        <linearGradient
+          id="hoveredGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" style="stop-color: #90ee90; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #32cd32; stop-opacity: 1" />
+        </linearGradient>
+      </defs>
       <path
         v-for="region in regions"
         :key="region.name"
@@ -27,19 +51,20 @@
         @click="selectedRegion = region.name"
         :fill="
           region.name === hoveredRegion
-            ? '#0ed522'
+            ? 'url(#hoveredGradient)'
             : region.name === selectedRegion
-            ? 'white'
+            ? 'url(#selectedGradient)'
             : '#A0D0FD'
         "
         :stroke="
           region.name === selectedRegion
-            ? '#ff0000' // Red border for selected region
+            ? '#ff4500' /* Orange-Red */
             : region.name === hoveredRegion
-            ? '#005500' // Green border for hovered region
-            : '#ffffff' // Default white border
+            ? '#32cd32' /* Green */
+            : '#ffffff' /* Default White */
         "
-        :stroke-width="region.name === selectedRegion ? 3 : 1.5"
+        :stroke-width="region.name === selectedRegion ? 4 : 2"
+        style="transition: fill 0.3s ease, stroke 0.3s ease"
       />
     </svg>
   </div>
@@ -147,7 +172,7 @@ export default {
 <style scoped>
 svg {
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   height: auto;
 }
 
@@ -171,5 +196,12 @@ svg {
   fill: #222;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   pointer-events: none;
+}
+
+path {
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+}
+path:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
 </style>
