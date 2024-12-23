@@ -4,7 +4,6 @@
       <el-header class="sticky-navbar">
         <el-affix :offset="0">
           <Header />
-          <MainNavigation />
         </el-affix>
       </el-header>
       <el-container class="layout-content">
@@ -15,7 +14,6 @@
       <el-footer><Footer /></el-footer>
     </el-container>
   </div>
-  <DialogNotification />
 </template>
 
 <script setup>

@@ -30,18 +30,17 @@
             ? '#0ed522'
             : region.name === selectedRegion
             ? 'white'
-            : '#A0D0FDFC'
+            : '#A0D0FD'
         "
-        :stroke="region.name === selectedRegion ? 'red' : '#ffffff'"
-        style="cursor: pointer"
+        :stroke="
+          region.name === selectedRegion
+            ? '#ff0000' // Red border for selected region
+            : region.name === hoveredRegion
+            ? '#005500' // Green border for hovered region
+            : '#ffffff' // Default white border
+        "
+        :stroke-width="region.name === selectedRegion ? 3 : 1.5"
       />
-      <text
-        v-if="hoveredRegion"
-        fill="#0ed522"
-        style="font-size: 16px; font-weight: bold"
-      >
-        {{ hoveredRegion }}
-      </text>
     </svg>
   </div>
 </template>
@@ -168,7 +167,7 @@ svg {
 /* Labels with better styling */
 .region-label {
   font-size: 16px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   fill: #222;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   pointer-events: none;
