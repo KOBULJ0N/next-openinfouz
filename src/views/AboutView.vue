@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DynamicPieChart from "@/components/statistics/DynamicPieChart.vue";
+import DynamicPieChart from "@/components/features/statistics/DynamicPieChart.vue";
 </script>
 
 <template>
