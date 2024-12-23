@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
+<<<<<<< HEAD
 
+=======
+>>>>>>> ee39394cecf6765990f95ccc007dabd8f4583705
 import MainLayout from "@/layout/MainLayout.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
