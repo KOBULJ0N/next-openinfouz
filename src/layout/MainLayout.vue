@@ -18,11 +18,7 @@
 
 <script setup>
 import Footer from "@/components/shared/Footer.vue";
-<<<<<<< HEAD
 import Header from "@/components/shared/header/Header.vue";
-=======
-import Header from "@/components/shared/Header.vue";
->>>>>>> ee39394cecf6765990f95ccc007dabd8f4583705
 import { RouterView } from "vue-router";
 </script>
 
