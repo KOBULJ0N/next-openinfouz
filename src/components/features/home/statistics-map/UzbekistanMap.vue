@@ -31,7 +31,6 @@
       @mouseleave="hoveredRegion = ''"
     >
       <defs>
-        <!-- Gradient for Selected Regions -->
         <linearGradient
           id="selectedGradient"
           x1="0%"
@@ -42,7 +41,7 @@
           <stop offset="0%" style="stop-color: #ff7f50; stop-opacity: 1" />
           <stop offset="100%" style="stop-color: #ff4500; stop-opacity: 1" />
         </linearGradient>
-        <!-- Gradient for Hovered Regions -->
+
         <linearGradient
           id="hoveredGradient"
           x1="0%"
@@ -72,10 +71,10 @@
         "
         :stroke="
           region.name === selectedRegion
-            ? '#ff4500' /* Orange-Red */
+            ? '#ff4500'
             : region.name === hoveredRegion
-            ? '#32cd32' /* Green */
-            : '#ffffff' /* Default White */
+            ? '#32cd32'
+            : '#ffffff'
         "
         :stroke-width="region.name === selectedRegion ? 4 : 2"
         style="transition: fill 0.3s ease, stroke 0.3s ease"
@@ -188,28 +187,6 @@ svg {
   width: 100%;
   max-width: 500px;
   height: auto;
-}
-
-.region {
-  fill: url(#region-gradient);
-  stroke: #ffffff;
-  stroke-width: 1.5;
-  transition: transform 0.3s, filter 0.3s;
-  cursor: pointer;
-}
-
-.region:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 10px #f8dd9a);
-}
-
-/* Labels with better styling */
-.region-label {
-  font-size: 16px;
-
-  fill: #222;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  pointer-events: none;
 }
 
 path {
