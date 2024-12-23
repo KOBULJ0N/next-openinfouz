@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
-import NodirasTestPage from "../views/NodirasTestPage.vue";
 import MainLayout from "@/layout/MainLayout.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
