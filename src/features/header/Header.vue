@@ -16,6 +16,10 @@
 <script setup>
 import { i18n } from "@/i18n/translate";
 import { ref, watch } from "vue";
+import Logo from "./Logo.vue";
+import SearchInput from "./SearchInput.vue";
+import LanguageSelector from "./LanguageSelector.vue";
+import ThemeSwitcher from "./ThemeSwitcher.vue";
 
 // const { t } = useI18n();
 const isDark = ref(false);

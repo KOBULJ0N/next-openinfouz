@@ -11,12 +11,14 @@
           <router-view :key="$route.path"></router-view>
         </el-main>
       </el-container>
-      <el-footer><Footer /></el-footer>
+      <Footer />
     </el-container>
   </div>
 </template>
 
 <script setup>
+import Footer from "@/features/footer/Footer.vue";
+import Header from "@/features/header/Header.vue";
 import { RouterView } from "vue-router";
 </script>
 
