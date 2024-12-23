@@ -1,9 +1,23 @@
 <template>
   <div style="align-items: center; justify-self: center">
-    <div style="color: #1256a0; font-size: 14px; justify-self: center">
-      <span style="font-weight: 400">Selected Region:</span>
-      <span style="font-weight: 600">{{ selectedRegion }}</span>
+    <div style="display: flex; align-items: center; justify-content: center">
+      <table style="border-collapse: collapse; font-size: 14px; color: #1256a0">
+        <tr>
+          <td style="font-weight: 400; padding-right: 5px">Selected Region:</td>
+          <td
+            style="
+              font-weight: 600;
+              width: 200px;
+              text-align: left;
+              white-space: nowrap;
+            "
+          >
+            {{ selectedRegion }}
+          </td>
+        </tr>
+      </table>
     </div>
+
     <svg
       xmlns="http://www.w3.org/2000/svg"
       baseProfile="tiny"
