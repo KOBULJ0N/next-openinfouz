@@ -3,9 +3,9 @@
     <UzbekistanMapTitle :selectedRegion="selectedRegion" />
 
     <!-- Example use of Map title optional style props
-     <UzbekistanMapTitle 
-      :selectedRegion="selectedRegion" 
-      :style="{ color: 'red', fontSize: '20px' }" 
+     <UzbekistanMapTitle
+      :selectedRegion="selectedRegion"
+      :style="{ color: 'red', fontSize: '20px' }"
     /> -->
 
     <svg
@@ -21,24 +21,12 @@
       @mouseleave="hoveredRegion = ''"
     >
       <defs>
-        <linearGradient
-          id="selectedGradient"
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="100%"
-        >
+        <linearGradient id="selectedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style="stop-color: #ff7f50; stop-opacity: 1" />
           <stop offset="100%" style="stop-color: #ff4500; stop-opacity: 1" />
         </linearGradient>
 
-        <linearGradient
-          id="hoveredGradient"
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="100%"
-        >
+        <linearGradient id="hoveredGradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style="stop-color: #90ee90; stop-opacity: 1" />
           <stop offset="100%" style="stop-color: #32cd32; stop-opacity: 1" />
         </linearGradient>
@@ -59,13 +47,7 @@
             ? 'url(#selectedGradient)'
             : '#A0D0FD'
         "
-        :stroke="
-          region.name === selectedRegion
-            ? '#ff4500'
-            : region.name === hoveredRegion
-            ? '#32cd32'
-            : '#ffffff'
-        "
+        :stroke="region.name === selectedRegion ? '#ff4500' : region.name === hoveredRegion ? '#32cd32' : '#ffffff'"
         :stroke-width="region.name === selectedRegion ? 4 : 2"
         style="transition: fill 0.3s ease, stroke 0.3s ease"
       />
