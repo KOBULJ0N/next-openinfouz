@@ -2,6 +2,12 @@
   <div style="align-items: center; justify-self: center">
     <UzbekistanMapTitle :selectedRegion="selectedRegion" />
 
+    <!-- Example use of Map title optional style props
+     <UzbekistanMapTitle 
+      :selectedRegion="selectedRegion" 
+      :style="{ color: 'red', fontSize: '20px' }" 
+    /> -->
+
     <svg
       xmlns="http://www.w3.org/2000/svg"
       baseProfile="tiny"
