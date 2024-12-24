@@ -1,7 +1,7 @@
 <script setup>
-import UzbekistanMap from "@/features/home/statistics-map/UzbekistanMap.vue";
+import StatisticsSectionContainer from "@/features/home/statistics/StatisticsSectionContainer.vue";
 </script>
 
 <template>
-  <UzbekistanMap style="margin-top: 40px" />
+  <StatisticsSectionContainer />
 </template>
