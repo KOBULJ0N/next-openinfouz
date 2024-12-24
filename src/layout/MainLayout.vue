@@ -17,8 +17,8 @@
 </template>
 
 <script setup>
-import Footer from "@/features/footer/Footer.vue";
-import Header from "@/features/header/Header.vue";
+import Footer from "@/shared/components/footer/Footer.vue";
+import Header from "@/shared/components/header/Header.vue";
 import { RouterView } from "vue-router";
 </script>
 
