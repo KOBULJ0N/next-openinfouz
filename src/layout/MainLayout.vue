@@ -4,7 +4,6 @@
       <el-header class="sticky-navbar">
         <el-affix :offset="0">
           <Header />
-          <MainNavigation />
         </el-affix>
       </el-header>
       <el-container class="layout-content">
@@ -15,13 +14,12 @@
       <el-footer><Footer /></el-footer>
     </el-container>
   </div>
-  <DialogNotification />
 </template>
 
 <script setup>
+import Footer from "@/shared/components/footer/Footer.vue";
+import Header from "@/shared/components/header/Header.vue";
 import { RouterView } from "vue-router";
-import Footer from "@/components/common/Footer.vue";
-import Header from "@/components/common/header/Header.vue";
 </script>
 
 <style scoped></style>

@@ -1,7 +1,7 @@
-<script setup></script>
+<script setup>
+import UzbekistanMap from "@/features/home/statistics-map/UzbekistanMap.vue";
+</script>
 
 <template>
-  <main>
-    <h1>Home</h1>
-  </main>
+  <UzbekistanMap style="margin-top: 40px" />
 </template>
