@@ -1,10 +1,10 @@
 <template>
   <div class="holder">
     <div class="left">
-      <DynamicPieChart :percentage="73" :total="100" />
-      <DynamicPieChart :percentage="35" :total="100" />
-      <DynamicPieChart :percentage="70" :total="100" />
-      <DynamicPieChart :percentage="93" :total="100" />
+      <DynamicPieChart :percentage="73" :total="235" />
+      <DynamicPieChart :percentage="35" :total="400" />
+      <DynamicPieChart :percentage="70" :total="522" />
+      <DynamicPieChart :percentage="93" :total="80" />
     </div>
     <div class="right">
       <UzbekistanMap />

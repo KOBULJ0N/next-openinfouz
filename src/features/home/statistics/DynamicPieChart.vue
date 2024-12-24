@@ -55,7 +55,7 @@ export default {
               {
                 value: this.percentage,
                 name: "Completed",
-                itemStyle: { color: "#90cdf4" },
+                itemStyle: { color: "#A0D0FDFC" },
               },
               {
                 value: 100 - this.percentage,
