@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: "RegionTitleComponent",
+  name: "UzbekistanMapTitle",
   props: {
     selectedRegion: {
       type: String,

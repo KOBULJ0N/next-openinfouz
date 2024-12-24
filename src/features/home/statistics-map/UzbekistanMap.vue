@@ -77,6 +77,10 @@
 import UzbekistanMapTitle from "./UzbekistanMapTitle.vue";
 
 export default {
+  name: "UzbekistanMap",
+  components: {
+    UzbekistanMapTitle,
+  },
   data() {
     return {
       selectedRegion: "Tashkent city",
