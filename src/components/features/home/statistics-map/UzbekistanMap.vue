@@ -187,4 +187,16 @@ path {
 path:hover {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
+
+@media (max-width: 768px) {
+  svg {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  svg {
+    max-width: 500px;
+  }
+}
 </style>
