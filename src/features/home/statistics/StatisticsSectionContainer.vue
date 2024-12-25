@@ -83,8 +83,27 @@ const selectedQuarter = ref("q1");
   justify-content: center;
   align-items: center;
 }
-
 .el-select {
   width: 100%;
+  border-radius: 20px;
+  border: 1px solid #dce7f4 !important;
+  color: #1256a0 !important;
+  overflow: hidden;
+  padding: 0 12px;
+  height: 40px;
+}
+
+.el-select__wrapper {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.el-select__wrapper:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.el-select:hover {
+  border-color: #dce7f4;
 }
 </style>
