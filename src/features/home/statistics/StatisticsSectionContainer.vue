@@ -23,8 +23,7 @@
   </div>
 
   <div class="holder flex justify-between gap-5 mt-5 max-w-4/5 mx-auto">
-    <h2>Statistics</h2>
-    <div class="left flex gap-5">
+    <div class="left">
       <DynamicPieChart :percentage="73" :total="292" />
       <DynamicPieChart :percentage="85" :total="450" />
       <DynamicPieChart :percentage="100" :total="450" />
@@ -58,6 +57,11 @@ const selectedQuarter = ref("q1");
 <style scoped>
 .el-select-dropdown__item.is-hovering {
   background-color: #f5f7fa !important;
+}
+
+.left {
+  display: flex;
+  gap: 20px;
 }
 
 .el-col.el-col-6.is-guttered {
