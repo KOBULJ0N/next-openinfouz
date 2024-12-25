@@ -1,14 +1,17 @@
 <template>
-  <div class="filter">
-    <el-row :gutter="20" class="filter-row">
-      <el-col :span="6">
+  <div class="filter mb-5 max-w-4/5 mx-auto mt-10">
+    <el-row
+      :gutter="20"
+      class="filter-row flex justify-start items-center gap-5"
+    >
+      <el-col :span="6" class="w-auto">
         <PillSelect
           v-model="selectedYear"
           :options="years"
           placeholder="Year"
         />
       </el-col>
-      <el-col :span="6">
+      <el-col :span="6" class="w-auto">
         <PillSelect
           v-model="selectedQuarter"
           :options="quarters"
@@ -19,9 +22,9 @@
     <el-divider />
   </div>
 
-  <div class="holder">
+  <div class="holder flex justify-between gap-5 mt-5 max-w-4/5 mx-auto">
     <h2>Statistics</h2>
-    <div class="left">
+    <div class="left flex gap-5">
       <DynamicPieChart :percentage="73" :total="292" />
       <DynamicPieChart :percentage="85" :total="450" />
       <DynamicPieChart :percentage="100" :total="450" />
@@ -52,32 +55,14 @@ const selectedYear = ref(2024);
 const selectedQuarter = ref("q1");
 </script>
 
-<style>
-.holder {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-  max-width: 80%;
-  margin: 0 auto;
+<style scoped>
+.el-select-dropdown__item.is-hovering {
+  background-color: #f5f7fa !important;
 }
 
-.left {
-  display: flex;
-  gap: 20px;
-}
-
-.filter {
-  margin-bottom: 20px;
-  max-width: 80%;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-
-.filter-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
+.el-col.el-col-6.is-guttered {
+  padding: 0 !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
 }
 </style>

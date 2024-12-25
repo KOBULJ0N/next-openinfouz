@@ -1,5 +1,9 @@
 <template>
-  <el-select v-model="localValue" :placeholder="placeholder">
+  <el-select
+    v-model="localValue"
+    :placeholder="placeholder"
+    class="pill-select"
+  >
     <el-option
       v-for="option in options"
       :key="option.value || option"
@@ -42,8 +46,8 @@ watch(
 );
 </script>
 
-<style>
-.el-select {
+<style scoped>
+.pill-select {
   width: auto !important;
   min-width: 105px !important;
   border-radius: 20px !important;
@@ -54,33 +58,33 @@ watch(
   height: 40px !important;
 }
 
-.el-select__wrapper.el-tooltip__trigger {
+.pill-select :deep(.el-select__wrapper.el-tooltip__trigger) {
   border: none !important;
   box-shadow: none !important;
 }
 
-.el-select__wrapper:hover {
+.pill-select :deep(.el-select__wrapper:hover) {
   border: none !important;
   box-shadow: none !important;
 }
 
-.el-select-dropdown__item.is-hovering {
+.pill-select :deep(.el-select-dropdown__item.is-hovering) {
   background-color: #f5f7fa !important;
 }
 
-.el-select__placeholder {
+.pill-select :deep(.el-select__placeholder) {
   color: #1256a0 !important;
 }
 
-.el-select__caret {
+.pill-select :deep(.el-select__caret) {
   color: #1256a0 !important;
 }
 
-.el-select:hover {
+.pill-select:hover {
   border-color: #dce7f4 !important;
 }
 
-.el-col.el-col-6.is-guttered {
+.pill-select :deep(.el-col.el-col-6.is-guttered) {
   padding: 0 !important;
   width: auto !important;
   flex: 0 0 auto !important;
