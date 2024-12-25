@@ -80,11 +80,12 @@ const selectedQuarter = ref("q1");
 
 .filter-row {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .el-select {
-  width: 100%;
+  width: auto;
+  min-width: 105px;
   border-radius: 20px;
   border: 1px solid #dce7f4 !important;
   color: #1256a0 !important;
