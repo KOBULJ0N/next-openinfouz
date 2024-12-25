@@ -119,4 +119,10 @@ const selectedQuarter = ref("q1");
 .el-select:hover {
   border-color: #dce7f4;
 }
+
+.el-col.el-col-6.is-guttered {
+  padding: 0;
+  width: auto;
+  flex: 0 0 auto;
+}
 </style>
