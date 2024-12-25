@@ -103,6 +103,18 @@ const selectedQuarter = ref("q1");
   box-shadow: none !important;
 }
 
+.el-select-dropdown__item.is-hovering {
+  background-color: #f5f7fa;
+}
+
+.el-select__placeholder {
+  color: #1256a0 !important;
+}
+
+.el-select__caret {
+  color: #1256a0 !important;
+}
+
 .el-select:hover {
   border-color: #dce7f4;
 }
