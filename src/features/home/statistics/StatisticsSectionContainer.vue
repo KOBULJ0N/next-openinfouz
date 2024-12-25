@@ -2,24 +2,18 @@
   <div class="filter">
     <el-row :gutter="20" class="filter-row">
       <el-col :span="6">
-        <el-select v-model="selectedYear" placeholder="Select Year">
-          <el-option
-            v-for="year in years"
-            :key="year"
-            :label="year"
-            :value="year"
-          />
-        </el-select>
+        <PillSelect
+          v-model="selectedYear"
+          :options="years"
+          placeholder="Year"
+        />
       </el-col>
       <el-col :span="6">
-        <el-select v-model="selectedQuarter" placeholder="Select Quarter">
-          <el-option
-            v-for="quarter in quarters"
-            :key="quarter.value"
-            :label="quarter.label"
-            :value="quarter.value"
-          />
-        </el-select>
+        <PillSelect
+          v-model="selectedQuarter"
+          :options="quarters"
+          placeholder="Quarter"
+        />
       </el-col>
     </el-row>
     <el-divider />
@@ -40,8 +34,10 @@
 </template>
 
 <script setup>
+import PillSelect from "@/shared/components/pill-shaped-select/PillSelect.vue";
 import UzbekistanMap from "../statistics-map/UzbekistanMap.vue";
 import DynamicPieChart from "./DynamicPieChart.vue";
+
 import { ref } from "vue";
 
 const years = [2023, 2024, 2025];
@@ -82,47 +78,6 @@ const selectedQuarter = ref("q1");
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-.el-select {
-  width: auto;
-  min-width: 105px;
-  border-radius: 20px;
-  border: 1px solid #dce7f4 !important;
-  color: #1256a0 !important;
-  overflow: hidden;
-  padding: 0 12px;
-  height: 40px;
-}
-
-.el-select__wrapper {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.el-select__wrapper:hover {
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.el-select-dropdown__item.is-hovering {
-  background-color: #f5f7fa;
-}
-
-.el-select__placeholder {
-  color: #1256a0 !important;
-}
-
-.el-select__caret {
-  color: #1256a0 !important;
-}
-
-.el-select:hover {
-  border-color: #dce7f4;
-}
-
-.el-col.el-col-6.is-guttered {
-  padding: 0;
-  width: auto;
-  flex: 0 0 auto;
+  gap: 20px;
 }
 </style>
