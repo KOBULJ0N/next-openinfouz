@@ -20,7 +20,10 @@
         <el-button
           v-for="filter in filters"
           :key="filter.value"
-          :class="{ 'is-active': activeFilter === filter.value }"
+          :class="{
+            'is-active': activeFilter === filter.value,
+            'is-inactive': activeFilter !== filter.value,
+          }"
           round
           @click="applyFilter(filter.value)"
         >
@@ -32,12 +35,8 @@
           placeholder="Эмитент"
           v-model="searchText"
           clearable
+          style="width: 300px"
         ></el-input>
-        <el-button
-          icon="el-icon-download"
-          type="primary"
-          style="margin-left: 10px"
-        ></el-button>
       </el-row>
       <el-table :data="filteredData" style="width: 100%; margin-top: 20px">
         <el-table-column prop="emitter" label="Эмитент"></el-table-column>
@@ -146,5 +145,17 @@ export default {
   background-color: #dceeff !important;
   color: #1256a0 !important;
   border: 1px solid #dceeff !important;
+}
+
+.is-inactive {
+  background-color: #dceeff !important;
+  color: #000000db !important;
+  border-color: transparent !important;
+}
+
+::v-deep .el-input__wrapper {
+  /* Add your custom styles here */
+
+  border-radius: 20px !important;
 }
 </style>
