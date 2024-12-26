@@ -1,7 +1,7 @@
 <script setup>
-import StatisticsSectionContainer from "@/features/home/statistics/StatisticsSectionContainer.vue";
+import InfoDiscTable from "@/features/home/info-disclosure/ess-facts/InfoDiscTable.vue";
 </script>
 
 <template>
-  <StatisticsSectionContainer />
+  <InfoDiscTable style="margin-top: 20px" />
 </template>
