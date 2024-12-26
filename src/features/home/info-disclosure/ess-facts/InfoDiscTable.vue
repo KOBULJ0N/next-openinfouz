@@ -154,8 +154,6 @@ export default {
 }
 
 ::v-deep .el-input__wrapper {
-  /* Add your custom styles here */
-
   border-radius: 20px !important;
 }
 </style>
