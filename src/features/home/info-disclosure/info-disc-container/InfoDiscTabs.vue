@@ -50,6 +50,9 @@ export default {
           { label: "Banks", value: "simple" },
           { label: "Energy", value: "energy" },
           { label: "Insurance", value: "privileged" },
+          { label: "Lising", value: "lising" },
+          { label: "Industry", value: "industry" },
+          { label: "Agriculture", value: "agriculture" },
         ],
         tableData: [
           {
@@ -63,12 +66,15 @@ export default {
       },
       financials: {
         columns: [
-          { label: "Период", prop: "period" },
-          { label: "Прибыль", prop: "profit" },
-          { label: "Доходы", prop: "revenue" },
-          { label: "Расходы", prop: "expenses" },
+          { label: "Issuer", prop: "period" },
+          { label: "Report Type", prop: "profit" },
+          { label: "Disclosure Date", prop: "revenue" },
+          { label: "Publication dates", prop: "expenses" },
         ],
         filters: [{ label: "All", value: "" }],
+        filters: [{ label: "Quarterly", value: "quarter" }],
+        filters: [{ label: "Annual", value: "annaul" }],
+
         tableData: [],
       },
       announcements: {
