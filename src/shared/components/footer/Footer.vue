@@ -10,20 +10,27 @@
         <!-- Left Section -->
         <div class="space-y-4 text-center md:text-left">
           <h3 class="font-bold text-lg w-full md:w-3/4">
-            ЕДИНЫЙ ПОРТАЛ КОРПОРАТИВНОЙ ИНФОРМАЦИИ НАЦИОНАЛЬНОГО АГЕНТСТВА ПЕРСПЕКТИВНЫХ ПРОЕКТОВ РЕСПУБЛИКИ УЗБЕКИСТАН
+            {{ t("footer.footer_logo_name") }}
           </h3>
           <ul class="space-y-2">
             <li class="flex items-center justify-center md:justify-start">
-              <img class="tg-icon" src="../../assets/icons/old_icons/telegram.svg" alt="tg-icon" />
-              <a href="https://t.me/openinfouz_bot" class="ml-2 hover:underline"> openinfouz_bot </a>
+              <img class="tg-icon" :src="telegramIcon" alt="tg-icon" />
+              <a
+                href="https://t.me/openinfouz_bot"
+                class="ml-2 hover:underline"
+              >
+                openinfouz_bot
+              </a>
             </li>
             <li class="flex items-center justify-center md:justify-start">
-              <img class="head-icon" src="../../assets/icons/old_icons/phone-call-white.svg" />
+              <img class="head-icon" :src="phoneIcon" />
               <span class="ml-2">+998 71 231 79 09</span>
             </li>
             <li class="flex items-center justify-center md:justify-start">
-              <img class="head-icon" src="../../assets/icons/old_icons/map.svg" />
-              <span class="ml-2">г.Ташкент, Мирабадский район, улица Нукус, 22, 100015</span>
+              <img class="head-icon" :src="mapIcon" />
+              <span class="ml-2"
+                >г.Ташкент, Мирабадский район, улица Нукус, 22, 100015</span
+              >
             </li>
           </ul>
         </div>
@@ -32,17 +39,22 @@
         <div class="space-y-4 text-center md:text-right mt-8 md:mt-0">
           <ul class="space-y-2">
             <li>
-              <span>Телефон модератора: +998 71 231 18 75</span>
+              <span
+                >{{ t("footer.phone_num_moderator") }} +998 71 231 18 75</span
+              >
             </li>
             <li>
-              <span>Электронная почта модератора:</span>
+              <span>{{ t("footer.email_moderator") }}</span>
               <span class="ml-2">info@napp.uz</span>
             </li>
             <li>
-              <span>Модератор: Национальное агентство перспективных проектов Республики Узбекистан</span>
+              <span>{{ t("footer.moderator") }} {{ t("footer.napp") }}</span>
             </li>
             <li>
-              <span>Техническая поддержка: Информационно-ресурсный центр фондового рынка</span>
+              <span
+                >{{ t("footer.technical_support") }}
+                {{ t("footer.technical_supporter") }}</span
+              >
             </li>
           </ul>
         </div>
@@ -50,14 +62,23 @@
 
       <!-- Footer Bottom -->
       <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
-        <p>При использовании материалов опубликованных на данном сайте, ссылка на openinfo.uz обязательна.</p>
-        <p>Все права защищены © 2015 - 2024</p>
+        <p>
+          {{ t("footer.copy_write_footer1") }}
+        </p>
+        <p>{{ t("footer.copy_write_footer") }}</p>
       </div>
     </div>
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+import { useI18n } from "vue-i18n";
+import telegramIcon from "@/assets/icons/old_icons/telegram.svg";
+import phoneIcon from "@/assets/icons/old_icons/phone-call-white.svg";
+import mapIcon from "@/assets/icons/old_icons/map.svg";
+
+const { t } = useI18n();
+</script>
 
 <style scoped>
 .footer-back {

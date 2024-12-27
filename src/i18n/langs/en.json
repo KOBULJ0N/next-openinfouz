@@ -3,5 +3,18 @@
     "personal_cabinet": "Issuers Account",
     "investor_cabinet": "Investor Account",
     "Search": "Search"
+  },
+  "footer": {
+    "napp": "National Agency of Perspective Projects of the Republic of Uzbekistan",
+    "ministry": "Ministry of Economy and Finance of the Republic of Uzbekistan",
+    "footer_logo_name": "UNIFIED CORPORATE INFORMATION PORTAL OF NATIONAL AGENCY OF PERSPECTIVE PROJECTS OF THE REPUBLIC OF UZBEKISTAN",
+    "copy_write_footer": "All rights reserved © 2015 - 2025",
+    "copy_write_footer1": "When using materials published on this site, a link to openinfo.uz is obligatory.",
+    "phone_num_moderator": "Moderator phone number:",
+    "email_moderator": "Moderator email:",
+    "moderator": "Moderator:",
+    "email_technician": "Technical support email:",
+    "technical_support": "Technical support:",
+    "technical_supporter": "Information-resource center of Capital Market"
   }
 }
