@@ -52,17 +52,30 @@
           prop="publicationDate"
           label="Дата публикации"
         ></el-table-column>
+        <el-table-column label="" prop="actions">
+          <template #default="scope">
+            <!-- Ensuring the icon is displayed properly -->
+            <el-icon>
+              <MoreFilled />
+            </el-icon>
+          </template>
+        </el-table-column>
       </el-table>
     </el-main>
   </el-container>
 </template>
 
 <script>
+import { MoreFilled } from "@element-plus/icons-vue";
+
 export default {
+  components: {
+    MoreFilled, // Registering the MoreFilled icon
+  },
   data() {
     return {
       activeTab: "facts",
-      activeFilter: "simple", // Default filter value
+      activeFilter: "simple",
       searchText: "",
       filters: [
         { label: "Банки", value: "simple" },
