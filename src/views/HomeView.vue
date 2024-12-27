@@ -1,7 +1,7 @@
 <script setup>
-import InfoDiscTable from "@/features/home/info-disclosure/ess-facts/InfoDiscTable.vue";
+import InfoDiscTabs from "@/features/home/info-disclosure/info-disc-container/InfoDiscTabs.vue";
 </script>
 
 <template>
-  <InfoDiscTable style="margin-top: 20px" />
+  <InfoDiscTabs />
 </template>
