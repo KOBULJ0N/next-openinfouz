@@ -46,7 +46,7 @@ const activeContainer = ref("Котировки");
   width: 391px;
   height: 100vh;
   position: relative;
-  background-color: aqua;
+  background-color: #fff;
 }
 
 .fixed-aside {
