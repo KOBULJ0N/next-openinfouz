@@ -116,11 +116,6 @@ h2 {
   font-size: 24px;
 }
 
-.el-header {
-  background-color: #f5f5f5;
-  padding: 10px 20px;
-}
-
 .el-tabs__header {
   margin-top: 10px;
 }
