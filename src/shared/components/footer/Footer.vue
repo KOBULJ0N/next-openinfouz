@@ -76,7 +76,6 @@ import { useI18n } from "vue-i18n";
 import telegramIcon from "@/assets/icons/old_icons/telegram.svg";
 import phoneIcon from "@/assets/icons/old_icons/phone-call-white.svg";
 import mapIcon from "@/assets/icons/old_icons/map.svg";
-import footerbgImage from "@/assets/images/stockmarket.png";
 
 const { t } = useI18n();
 </script>
