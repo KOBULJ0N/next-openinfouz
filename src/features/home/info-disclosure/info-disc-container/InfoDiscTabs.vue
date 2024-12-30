@@ -37,6 +37,7 @@ export default {
     const activeTab = ref("facts");
 
     // Mock Data for tabs
+    // Mock Data for tabs
     const mockData = {
       facts: {
         columns: [
@@ -62,56 +63,114 @@ export default {
             publicationDate: "19.08.2024",
             type: "simple",
           },
+          {
+            emitter: '"ENERGY PLUS" ООО',
+            factNumber: "Факт № 7",
+            disclosureDate: "20.08.2024",
+            publicationDate: "20.08.2024",
+            type: "energy",
+          },
+          {
+            emitter: '"INDUSTRIAL CORP" ПАО',
+            factNumber: "Факт № 8",
+            disclosureDate: "21.08.2024",
+            publicationDate: "21.08.2024",
+            type: "industry",
+          },
         ],
       },
       financials: {
         columns: [
-          { label: "Issuer", prop: "period" },
-          { label: "Report Type", prop: "profit" },
-          { label: "Disclosure Date", prop: "revenue" },
-          { label: "Publication dates", prop: "expenses" },
+          { label: "Issuer", prop: "issuer" },
+          { label: "Report Type", prop: "reportType" },
+          { label: "Disclosure Date", prop: "disclosureDate" },
+          { label: "Publication Date", prop: "publicationDate" },
         ],
         filters: [
           { label: "All", value: "" },
-          { label: "Quarterly", value: "quarter" },
-          { label: "Annual", value: "annaul" },
+          { label: "Quarterly", value: "Quarterly" },
+          { label: "Annual", value: "annual" },
         ],
-
-        tableData: [],
+        tableData: [
+          {
+            issuer: '"BANK OF FINANCE" ПАО',
+            reportType: "Quarterly",
+            disclosureDate: "15.08.2024",
+            publicationDate: "16.08.2024",
+            type: "Quarterly",
+          },
+          {
+            issuer: '"AGRICULTURE FUND" ООО',
+            reportType: "Annual",
+            disclosureDate: "18.08.2024",
+            publicationDate: "19.08.2024",
+            type: "annual",
+          },
+        ],
       },
       announcements: {
         columns: [
-          { label: "Issuer", prop: "emitnet" },
-          { label: "Announcement Type", prop: "ann_type" },
-          { label: "Disclosure Date", prop: "revenue" },
-          { label: "Publication dates", prop: "expenses" },
+          { label: "Issuer", prop: "issuer" },
+          { label: "Announcement Type", prop: "announcementType" },
+          { label: "Disclosure Date", prop: "disclosureDate" },
+          { label: "Publication Date", prop: "publicationDate" },
         ],
         filters: [
           { label: "All", value: "" },
-          { label: "Banks", value: "simple" },
+          { label: "Banks", value: "banks" },
           { label: "Energy", value: "energy" },
-          { label: "Insurance", value: "privileged" },
-          { label: "Lising", value: "lising" },
+          { label: "Insurance", value: "insurance" },
+          { label: "Leasing", value: "leasing" },
           { label: "Industry", value: "industry" },
           { label: "Agriculture", value: "agriculture" },
         ],
-        tableData: [],
+        tableData: [
+          {
+            issuer: '"CITY DEVELOPMENT" АО',
+            announcementType: "New Policy",
+            disclosureDate: "10.08.2024",
+            publicationDate: "11.08.2024",
+            type: "leasing",
+          },
+          {
+            issuer: '"GREEN ENERGY" ООО',
+            announcementType: "Dividend Declaration",
+            disclosureDate: "12.08.2024",
+            publicationDate: "13.08.2024",
+            type: "energy",
+          },
+        ],
       },
       securities: {
         columns: [
-          { label: "Issuer", prop: "emitnet" },
-          { label: "Emission Type", prop: "em_type" },
-          { label: "Disclosure Date", prop: "revenue" },
-          { label: "Publication dates", prop: "expenses" },
+          { label: "Issuer", prop: "issuer" },
+          { label: "Emission Type", prop: "emissionType" },
+          { label: "Disclosure Date", prop: "disclosureDate" },
+          { label: "Publication Date", prop: "publicationDate" },
         ],
         filters: [
           { label: "All", value: "" },
-          { label: "Banks", value: "Banks" },
-          { label: "JSC", value: "JSC" },
-          { label: "PO", value: "privorg" },
-          { label: "LLC", value: "limitedLiabComp" },
+          { label: "Banks", value: "banks" },
+          { label: "JSC", value: "jsc" },
+          { label: "PO", value: "po" },
+          { label: "LLC", value: "llc" },
         ],
-        tableData: [],
+        tableData: [
+          {
+            issuer: '"STOCKTRADE" ООО',
+            emissionType: "Public Offering",
+            disclosureDate: "05.08.2024",
+            publicationDate: "06.08.2024",
+            type: "llc",
+          },
+          {
+            issuer: '"MINING INC" ПАО',
+            emissionType: "Private Placement",
+            disclosureDate: "07.08.2024",
+            publicationDate: "08.08.2024",
+            type: "jsc",
+          },
+        ],
       },
     };
 
