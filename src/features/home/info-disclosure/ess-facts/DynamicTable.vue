@@ -17,11 +17,16 @@
       </div>
       <el-row>
         <el-input
-          placeholder="Search"
+          placeholder="Issuer"
           v-model="searchText"
           clearable
-          style="width: 300px"
+          class="custom-input"
         ></el-input>
+        <span class="custom-icon">
+          <el-icon>
+            <Bottom />
+          </el-icon>
+        </span>
       </el-row>
       <el-table
         :data="filteredAndSearchedData"
@@ -46,12 +51,13 @@
 </template>
 
 <script>
-import { MoreFilled } from "@element-plus/icons-vue";
+import { MoreFilled, Bottom } from "@element-plus/icons-vue";
 
 export default {
   name: "DynamicTable",
   components: {
     MoreFilled,
+    Bottom,
   },
   props: {
     columns: {
@@ -123,5 +129,49 @@ export default {
 
 ::v-deep .el-input__wrapper {
   border-radius: 20px !important;
+}
+/* Input without rectangular wrapper */
+.custom-input {
+  width: 300px;
+  border: 1px solid #dce7f4;
+  border-radius: 20px;
+}
+
+/* Customize placeholder color */
+::v-deep(.custom-input .el-input__inner::placeholder) {
+  color: #1256a0;
+}
+
+/* Input inner styles */
+::v-deep(.custom-input .el-input__inner) {
+  border-radius: 20px !important;
+  padding: none;
+}
+
+/* Input focus styles */
+::v-deep(.custom-input .el-input__inner:focus) {
+  border-color: #1256a0 !important;
+  outline: none;
+}
+
+/* Icon Circle Styles */
+.custom-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dce7f4; /* Circle border */
+  border-radius: 50%; /* Makes the circle */
+  margin-left: 8px;
+}
+
+.custom-icon .el-icon {
+  font-size: 16px;
+  color: #1256a0; /* Arrow color */
+}
+
+.custom-icon:hover {
+  background-color: #f0f8ff; /* Optional: Adds a hover effect */
 }
 </style>
