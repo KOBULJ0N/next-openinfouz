@@ -71,20 +71,46 @@ export default {
           { label: "Disclosure Date", prop: "revenue" },
           { label: "Publication dates", prop: "expenses" },
         ],
-        filters: [{ label: "All", value: "" }],
-        filters: [{ label: "Quarterly", value: "quarter" }],
-        filters: [{ label: "Annual", value: "annaul" }],
+        filters: [
+          { label: "All", value: "" },
+          { label: "Quarterly", value: "quarter" },
+          { label: "Annual", value: "annaul" },
+        ],
 
         tableData: [],
       },
       announcements: {
-        columns: [],
-        filters: [],
+        columns: [
+          { label: "Issuer", prop: "emitnet" },
+          { label: "Announcement Type", prop: "ann_type" },
+          { label: "Disclosure Date", prop: "revenue" },
+          { label: "Publication dates", prop: "expenses" },
+        ],
+        filters: [
+          { label: "All", value: "" },
+          { label: "Banks", value: "simple" },
+          { label: "Energy", value: "energy" },
+          { label: "Insurance", value: "privileged" },
+          { label: "Lising", value: "lising" },
+          { label: "Industry", value: "industry" },
+          { label: "Agriculture", value: "agriculture" },
+        ],
         tableData: [],
       },
       securities: {
-        columns: [],
-        filters: [],
+        columns: [
+          { label: "Issuer", prop: "emitnet" },
+          { label: "Emission Type", prop: "em_type" },
+          { label: "Disclosure Date", prop: "revenue" },
+          { label: "Publication dates", prop: "expenses" },
+        ],
+        filters: [
+          { label: "All", value: "" },
+          { label: "Banks", value: "Banks" },
+          { label: "JSC", value: "JSC" },
+          { label: "PO", value: "privorg" },
+          { label: "LLC", value: "limitedLiabComp" },
+        ],
         tableData: [],
       },
     };
