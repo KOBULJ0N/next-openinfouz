@@ -25,11 +25,6 @@ const router = createRouter({
           name: "about",
           component: () => import("../views/AboutView.vue"),
         },
-        {
-          path: "/example",
-          name: "example",
-          component: () => import("../features/home/stock-sidebar/layout/Layout.vue"),
-        },
       ],
     },
   ],

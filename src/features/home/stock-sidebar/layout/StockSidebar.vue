@@ -1,6 +1,6 @@
 <template>
-  <div class="stock-saidbar">
-    <main class="">
+  <div class="stock-sidebar">
+    <main class="main-content">
       <div v-if="activeContainer === 'Котировки'">
         <QuotesContainer />
       </div>
@@ -28,6 +28,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import Sidebar from "./Sidebar.vue";
 import QuotesContainer from "../containers/QuotesContainer.vue";
 import WatchlistContainer from "../containers/WatchlistContainer.vue";
@@ -36,14 +37,14 @@ import BrokersCatalogContainer from "../containers/BrokersCatalogContainer.vue";
 import LatestNewsContainer from "../containers/LatestNewsContainer.vue";
 import ToolsContainer from "../containers/ToolsContainer.vue";
 import TariffContainer from "../containers/TariffContainer.vue";
-import { ref } from "vue";
 
 const activeContainer = ref("Котировки");
 </script>
 
-<style>
-.stock-saidbar {
+<style scoped>
+.stock-sidebar {
   width: 391px;
+  display: flex;
   height: 100vh;
   position: relative;
   background-color: #fff;
@@ -51,12 +52,15 @@ const activeContainer = ref("Котировки");
 
 .fixed-aside {
   position: absolute;
-  height: 100%;
-  right: 0;
   top: 0;
+  right: 0;
+  width: 100%;
+  width: 72px;
+  background-color: #f2f7fc;
+  border-left: 1px solid #ecedef;
 }
 
-.main {
-  margin-right: 72px;
+.main-content {
+  flex: 1;
 }
 </style>
